@@ -4,6 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#126c9c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Manantial FM">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
 <title>Manantial FM | Escuchar en directo</title>
 <meta name="description" content="Escucha Manantial FM. Tu radio amiga, tu música, tu fe.">
 <style>
@@ -72,5 +77,6 @@ Tu navegador no admite audio.
 </section>
 <p>Desde Barcelona para las naciones 🌍</p>
 </main>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
 </body>
 </html>
