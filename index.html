@@ -15,9 +15,9 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 25px;
+  padding: 18px;
   min-height: 100vh;
-  background: linear-gradient(145deg,#09213d,#126c9c);
+  background: radial-gradient(circle at top,#175d87,#081a32 65%);
   color: white;
   font-family: Arial, sans-serif;
   display: flex;
@@ -27,14 +27,16 @@ body {
 }
 main {
   width: 100%;
-  max-width: 850px;
-  padding: 35px 20px;
-  background: #ffffff18;
+  max-width: 960px;
+  padding: clamp(20px,5vw,48px);
+  background: #ffffff10;
+  border:1px solid #ffffff28;
+  box-shadow:0 20px 60px #0005;
   border-radius: 24px;
 }
 h1 { font-size: 40px; margin-bottom: 10px; }
 h2 { font-size: 23px; }
-section.programa {margin:18px 0;padding:18px;background:#ffffff12;border-radius:16px;text-align:left;}
+section.programa {margin:18px 0;padding:22px;background:#ffffff12;border:1px solid #ffffff25;border-radius:18px;text-align:left;}
 section.programa h3 {margin:0 0 8px;color:#ffcf76;}
 .historia {text-align:left;line-height:1.7;}
 p { line-height: 1.5; }
@@ -50,14 +52,20 @@ audio { width: 100%; margin: 20px 0; }
   text-decoration: none;
 }
 .azul { background: #d5f3ff; }
+nav {display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:24px 0;}
+nav a {color:#fff;text-decoration:none;border:1px solid #ffffff55;padding:9px 13px;border-radius:24px;}
+nav a:hover {background:#ffffff25;}
+.boton:hover {filter:brightness(1.07);}
+.hero {padding:18px 0 25px;}
+.hero h1 {letter-spacing:2px;color:#ffe0a1;}
+.tagline {font-size:1.1rem;color:#cbeafa;}
+@media(min-width:700px){.program-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.program-grid .programa{margin:0}}
 </style>
 </head>
 <body>
 <main>
-<div style="font-size:65px">🎙️</div>
-<h1>MANANTIAL FM</h1>
-<p>Tu radio amiga, tu música, tu fe.</p>
-<h2>📻 Escuchar en directo</h2>
+<header class="hero"><div style="font-size:65px" aria-hidden="true">📻</div><h1>MANANTIAL FM</h1><p class="tagline">Tu radio amiga, tu música, tu fe.</p><p>Desde Barcelona para las naciones 🌍</p><nav aria-label="Secciones"><a href="#directo">En directo</a><a href="#programacion">Programación</a><a href="#publicidad">Publicidad</a><a href="#fundadores">Fundadores</a><a href="#apoyar">Apoyar</a></nav></header>
+<h2 id="directo">📻 Escuchar en directo</h2>
 
 <audio controls preload="none">
 <source src="https://cast4.prosandoval.com/listen/bcn_gospel_channel/radio.mp3" type="audio/mpeg">
@@ -73,21 +81,21 @@ Tu navegador no admite audio.
 </a>
 
 
-<section aria-label="Apoya Manantial FM" style="margin-top:25px;padding-top:12px;border-top:1px solid #ffffff55">
+<section id="apoyar" aria-label="Apoya Manantial FM" style="margin-top:25px;padding-top:12px;border-top:1px solid #ffffff55">
 <h2>❤️ Ayúdanos a seguir compartiendo esperanza</h2>
 <p>Tu aportación ayuda a mantener Manantial FM en el aire.</p>
 <a class="boton" href="https://www.paypal.com/ncp/payment/MZACBZ2BEMJSA" target="_blank" rel="noopener noreferrer">💛 APOYAR MANANTIAL FM CON PAYPAL</a>
 </section>
 
-<section aria-label="Programación de Manantial FM" style="margin-top:35px">
+<section id="programacion" aria-label="Programación de Manantial FM" style="margin-top:35px">
 <h2>🎶 Nuestra programación</h2>
 <p>Disfruta de diferentes estilos musicales y espacios pensados para acompañarte.</p>
-<section class="programa"><h3>🎷 Momentos de Jazz</h3><p><strong>Lunes · 18:00 h</strong></p><p>Un encuentro semanal con los sonidos del jazz, sus melodías y su riqueza musical.</p></section>
+<div class="program-grid"><section class="programa"><h3>🎷 Momentos de Jazz</h3><p><strong>Lunes · 18:00 h</strong></p><p>Un encuentro semanal con los sonidos del jazz, sus melodías y su riqueza musical.</p></section>
 <section class="programa"><h3>💃 Momentos de Flamenco</h3><p><strong>Martes · 18:00 h</strong></p><p>Una cita con el arte y la expresividad del flamenco, sus guitarras y sus ritmos.</p></section>
-<section class="programa"><h3>🪕 Música Andina</h3><p><strong>Miércoles · 18:00 h</strong></p><p>Un viaje musical por los sonidos y las tradiciones de los Andes.</p></section>
+<section class="programa"><h3>🪕 Música Andina</h3><p><strong>Miércoles · 18:00 h</strong></p><p>Un viaje musical por los sonidos y las tradiciones de los Andes.</p></section></div>
 </section>
-<section aria-label="Publicidad y pódcast" class="programa"><h2>📢 Publicidad y pódcast</h2><p>¿Tienes un negocio, iglesia, evento o proyecto que quieras dar a conocer? Consulta nuestros espacios publicitarios y opciones para pódcast. También ofrecemos una promoción de 20 segundos gratuitos; pregunta por las condiciones y disponibilidad.</p><p>Información: <a href="tel:+34640343797" style="color:#ffcf76">+34 640 343 797</a> · <a href="mailto:calabuigcocinero@gmail.com" style="color:#ffcf76">calabuigcocinero@gmail.com</a></p></section>
-<section aria-label="Fundadores" class="programa historia"><h2>❤️ Nuestros fundadores</h2><h3>Siete años llevando esperanza</h3><p>Manantial FM nació en 2019, fruto de una historia de vida, transformación y fe. Sus fundadores, Charles Calabuig Machado y Patricia Ramos de Sousa, impulsaron este proyecto con el deseo de compartir un mensaje positivo y llevar esperanza a través de la radio.</p><p>Mucho antes de contraer matrimonio con Patricia, Charles vivió una etapa difícil de su vida. Las malas compañías lo llevaron a experimentar la dureza de vivir en la calle. Sin embargo, su historia dio un giro cuando tuvo un encuentro personal con el Señor. Aquella experiencia marcó el comienzo de una nueva etapa y sembró en su corazón el deseo de transmitir esperanza a otras personas.</p><p>Hoy, Manantial FM continúa compartiendo música, fe y mensajes positivos desde Barcelona para las naciones.</p><p><em>Esta historia es un primer relato que ampliaremos próximamente.</em></p></section>
+<section id="publicidad" aria-label="Publicidad y pódcast" class="programa"><h2>📢 Publicidad y pódcast</h2><p>¿Tienes un negocio, iglesia, evento o proyecto que quieras dar a conocer? Consulta nuestros espacios publicitarios y opciones para pódcast. También ofrecemos una promoción de 20 segundos gratuitos; pregunta por las condiciones y disponibilidad.</p><p>Información: <a href="tel:+34640343797" style="color:#ffcf76">+34 640 343 797</a> · <a href="mailto:calabuigcocinero@gmail.com" style="color:#ffcf76">calabuigcocinero@gmail.com</a></p></section>
+<section id="fundadores" aria-label="Fundadores" class="programa historia"><h2>❤️ Nuestros fundadores</h2><h3>Siete años llevando esperanza</h3><p>Manantial FM nació en 2019, fruto de una historia de vida, transformación y fe. Sus fundadores, Charles Calabuig Machado y Patricia Ramos de Sousa, impulsaron este proyecto con el deseo de compartir un mensaje positivo y llevar esperanza a través de la radio.</p><p>Mucho antes de contraer matrimonio con Patricia, Charles vivió una etapa difícil de su vida. Las malas compañías lo llevaron a experimentar la dureza de vivir en la calle. Sin embargo, su historia dio un giro cuando tuvo un encuentro personal con el Señor. Aquella experiencia marcó el comienzo de una nueva etapa y sembró en su corazón el deseo de transmitir esperanza a otras personas.</p><p>Hoy, Manantial FM continúa compartiendo música, fe y mensajes positivos desde Barcelona para las naciones.</p><p><em>Esta historia es un primer relato que ampliaremos próximamente.</em></p></section>
 <p>Desde Barcelona para las naciones 🌍</p>
 </main>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
