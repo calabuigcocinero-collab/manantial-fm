@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a30">
+  <meta name="description" content="Escucha Horizonte Sonoro Radio en directo. Góspel 24/7 en inglés y en español.">
+  <title>Horizonte Sonoro Radio · Góspel 24/7</title>
+  <link rel="icon" href="./logo.webp" type="image/webp">
+  <style>
+    :root { color-scheme:dark; background:#071a30; color:#f4f8fc; font-family:"Segoe UI",system-ui,sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 80% 0%,#155570,transparent 53%),#071a30; }
+    .shell { max-width:1120px; margin:auto; padding:clamp(1.25rem,5vw,4rem); }
+    .top { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; padding-bottom:clamp(2rem,8vw,5rem); }
+    a { color:#b7ebea; text-underline-offset:.22em; }
+    .hero { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); align-items:center; gap:clamp(1.5rem,6vw,5rem); }
+    h1 { margin:0; font-size:clamp(2.4rem,6.5vw,5.3rem); line-height:1; letter-spacing:-.055em; }
+    h1 span { display:block; color:#ffb45a; }
+    h2 { margin:0 0 .5rem; font-size:1.05rem; }
+    p { color:#cee0eb; line-height:1.55; }
+    .brand { display:grid; place-items:center; min-width:0; padding:1rem; background:#f8f7f2; border-radius:2rem; }
+    .brand img { display:block; width:min(100%,360px); height:auto; }
+    .player { margin:1.7rem 0 0; padding:1rem 1.25rem; border:1px solid #3d6476; background:#0b263d; border-radius:1.2rem; }
+    audio { display:block; width:100%; margin:.6rem 0 .8rem; }
+    .caption { margin:.5rem 0 0; font-size:.9rem; }
+    footer { margin-top:3rem; border-top:1px solid #3d6476; padding-top:1.25rem; color:#cee0eb; }
+    @media(max-width:670px) { .hero{grid-template-columns:1fr} .brand{grid-row:1;max-width:280px} .top{padding-bottom:1.5rem} }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="top" aria-label="Nuestros medios"><a href="../">Manantial FM</a><a href="https://calabuigcocinero-collab.github.io/Bcngospelchannel/">BCN Gospel Channel</a></nav>
+    <main class="hero">
+      <div>
+        <h1>Horizonte Sonoro <span>Radio</span></h1>
+        <p>Góspel 24/7 en inglés y en español. Coros, grandes voces y clásicos del góspel.</p>
+        <section class="player" aria-labelledby="en-directo">
+          <h2 id="en-directo">Escuchar en directo</h2>
+          <audio controls preload="none" aria-label="Horizonte Sonoro Radio en directo">
+            <source src="https://s3.citrus3.com:2000/stream/manantialbrfm" type="audio/mpeg">
+            Tu navegador no admite el reproductor de audio.
+          </audio>
+          <a href="https://s3.citrus3.com:2000/public/manantialbrfm" target="_blank" rel="noopener noreferrer">Abrir reproductor de Citrus3</a>
+        </section>
+      </div>
+      <div class="brand"><img src="./logo.webp" alt="Logo oficial de Horizonte Sonoro Radio" width="720" height="720" fetchpriority="high"></div>
+    </main>
+    <footer>Música que inspira tu alma.</footer>
+  </div>
+</body>
+</html>
