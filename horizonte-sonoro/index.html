@@ -26,12 +26,18 @@
     .caption { margin:.5rem 0 0; font-size:.9rem; }
     footer { margin-top:3rem; border-top:1px solid #3d6476; padding-top:1.25rem; color:#cee0eb; }
     @media(max-width:670px) { .hero{grid-template-columns:1fr} .brand{grid-row:1;max-width:280px} .top{padding-bottom:1.5rem} }
+  .founder { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; gap:clamp(1rem,5vw,3rem); margin-top:clamp(2.5rem,7vw,5rem); padding:clamp(1rem,3vw,2rem); border:1px solid #3d6476; border-radius:1.2rem; background:#0b263d; }
+    .founder img { display:block; width:100%; height:auto; border-radius:.75rem; }
+    .founder h3 { margin:.25rem 0 .5rem; font-size:clamp(1.5rem,4vw,2.6rem); line-height:1.15; }
+    .founder h2 { color:#ffb45a; }
+    @media(max-width:670px) { .founder { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
   <div class="shell">
-    <nav class="top" aria-label="Nuestros medios"><a href="../">Manantial FM</a><a href="https://calabuigcocinero-collab.github.io/Bcngospelchannel/">BCN Gospel Channel</a></nav>
-    <main class="hero">
+    <nav class="top" aria-label="Navegación"><a href="#fundador">Fundador</a><a href="../">Manantial FM</a><a href="https://calabuigcocinero-collab.github.io/Bcngospelchannel/">BCN Gospel Channel</a></nav>
+    <main>
+    <section class="hero" aria-label="Horizonte Sonoro Radio">
       <div>
         <h1>Horizonte Sonoro <span>Radio</span></h1>
         <p>Góspel 24/7 en inglés y en español. Coros, grandes voces y clásicos del góspel.</p>
@@ -45,6 +51,15 @@
         </section>
       </div>
       <div class="brand"><img src="./logo.webp" alt="Logo oficial de Horizonte Sonoro Radio" width="720" height="720" fetchpriority="high"></div>
+    </section>
+    <section class="founder" id="fundador" aria-labelledby="fundador-titulo">
+      <img src="./fundador-charles.webp" alt="Retrato en blanco y negro de Charles Calabuig Machado" width="1184" height="864" loading="lazy" decoding="async">
+      <div>
+        <h2 id="fundador-titulo">Fundador</h2>
+        <h3>Charles Calabuig Machado</h3>
+        <p>Charles impulsa Horizonte Sonoro Radio desde Barcelona, un espacio para compartir góspel en inglés y en español y llevar un mensaje de fe y esperanza a través de la música.</p>
+      </div>
+    </section>
     </main>
     <footer>Música que inspira tu alma.</footer>
   </div>
